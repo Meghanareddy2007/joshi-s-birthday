@@ -10,7 +10,7 @@ body {
     min-height:100vh;
     font-family: 'Arial', sans-serif;
     text-align:center;
-    background: linear-gradient(to bottom,#6dd5fa,#2980b9);
+    background: linear-gradient(to bottom,#6dd5fa,#a7e9fa);
     /* color:rgb(253, 252, 252); */
     
 }
@@ -31,29 +31,103 @@ h1 {
 }
 h4 {
     font-family:"Comic Sans MS",cursive,sans-serif;
-    color:#ff2f92;
+    color:#662fff;
     font-size:42px;
     text-align:center;
-    text-shadow:2px 2px 5px black;
+    text-shadow:2px 2px 5px rgb(255, 255, 255);
     }
 @keyframes glow {
     from { text-shadow:0 0 10px white; }
     to { text-shadow:0 0 25px rgb(136, 235, 238); }
 }
 
-.scroll-text {
+/* scroll-text {
     margin-top:20px;
+    
     animation: bounce 1.5s infinite;
+}. */
+.scroll-text {
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(90deg, red, yellow, cyan, lime, pink);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 3s infinite linear, bounce 1.5s infinite;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
 }
 
 @keyframes bounce {
     0%,100%{transform:translateY(0);}
     50%{transform:translateY(10px);}
 }
+/* Main surprise box */
+.surprise-box {
+  background-color: #cbf1f5;   /* Same blue color */
+  padding: 40px 20px;
+  margin: 50px auto;
+  text-align: center;
 
+  width: 90%;
+  max-width: 900px;
+
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+.surprise-box h2 {
+  color: rgb(4, 6, 95);
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* Note text */
+.note {
+  color: rgb(2, 4, 95);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Buttons container */
+.gift-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Buttons style */
+.gift-buttons button {
+  background-color: #2ecc71;
+  color: white;
+
+  border: none;
+  padding: 12px 20px;
+
+  font-size: 16px;
+  border-radius: 25px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.gift-buttons button:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
 .section {
-    padding:80px 20px;
-    background:#da78c4;
+    margin: 1px;
+    /* min-height:100vh; */
+    font-family: 'Arial', sans-serif;
+    text-align:center;
+    background: linear-gradient(to bottom,#3cbceb,#2980b9);
 }
 
 button {
@@ -95,36 +169,41 @@ button:hover {
 
 <div class="hero">
     <h1>🎉 HAPPIEST BIRTHDAY <br>SIVA KESAVA JOSHI PRANEETH 🎂</h1>
-   
+    <p style="color:white;"><b>Watch the video and get down...🤍👻</b></p>
     <video width="400" controls playinline class="bg-video">
     <source src="./birthday.mp4.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
-    <p class="scroll-text">Scroll Down to get your surprises👇</p>
+    <p class="scroll-text"><b>Scroll Down to get your surprises👇</b></p>
 
 </div>
 
-<div class="section">
+<div >
+    <br>
+    <div class="surprise-box">
+
     <h2>Choose Your Surprise ...🎁</h2>
-    <h4>NOTE: Open GIFT1 at the end...</h4>
-    <button onclick="location.href='letter.html'">
-        💌 Click here for GIFT 1
-    </button>
+    <p class="note">NOTE: Open GIFT1 at the end...</p>
+    <div class="gift-buttons">
+        <button onclick="location.href='letter.html'">
+            💌 Click here for GIFT 1
+        </button>
 
-    <button onclick="location.href='video.html'">
-        🎬 Click here for GIFT 2
-    </button>
+        <button onclick="location.href='video.html'">
+            🎬 Click here for GIFT 2
+        </button>
 
-    <button onclick="location.href='voice.html'">
-        🎙 Click here for GIFT 3
-    </button>
+        <button onclick="location.href='voice.html'">
+            🎙 Click here for GIFT 3
+        </button>
 
     <br>
-    
+    </div>
 </div>
 
 </body>
 </html>
+
 
 
 
