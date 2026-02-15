@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Special Audio Message 🎧</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background: linear-gradient(to bottom,#ff9a9e,#fad0c4);
+    font-family: Arial, sans-serif;
+    text-align:center;
+}
+
+h1{
+    color:white;
+    text-shadow:0 0 15px #ff4e50;
+    font-size: clamp(26px,5vw,45px);
+}
+
+.audio-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.3);
+    margin-top:20px;
+}
+
+audio{
+    width:250px;
+    margin-top:15px;
+}
+
+button{
+    margin-top:30px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:linear-gradient(to right,#ff4e50,#f9d423);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎧 A Special Audio Message For You 💖</h1>
+
+<div class="audio-box">
+    <p>Close your eyes and listen carefully... 🤍</p>
+
+    <audio controls>
+        <source src="song_maggi.mp4" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+<button onclick="location.href='index.html'">⬅ Back to Main Page</button>
+
+</body>
+</html>
